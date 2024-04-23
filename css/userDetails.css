@@ -1,0 +1,52 @@
+:root {
+    --picSize: 150px;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    justify-content: center;
+    padding: 10px;
+}
+
+.form-icon{
+    display: flex !important;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+#picContainer {
+    justify-content: center;
+    display: flex;
+    min-height: var(--picSize);
+}
+
+#profilePic{
+    min-width: var(--picSize);
+    margin: 10px;
+}
+
+#picHover, #fileLabel{
+    position: absolute;
+    min-height: var(--picSize);
+    min-width: var(--picSize);
+    background-color: black;
+    margin: 10px;
+    border-radius: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+#picHover:hover {
+    opacity: 0.3;
+}
+
+#map{
+    height: 400px;
+    width: 600px;
+}
+
+

@@ -1,0 +1,272 @@
+:root {
+    --background: linear-gradient(347deg, rgb(76, 76, 76) 0%, rgb(57, 57, 57) 100%);
+    --light-orange: #ffc107;
+    --dark: #202020;
+    --advHeigth: 80px;
+    --advWidth: 160px;
+    --pink: #d53a9d;
+    --violet: #743ad5;
+}
+
+label, span, i {
+    color: white;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+a {
+    color: var(--light-orange);
+}
+
+a:hover{
+    color: var(--pink);
+}
+
+#loginContainer {
+    width: 100vw;
+    margin-top: 80px;
+}
+
+#loginForm {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#appTitle{
+    margin-left: 8px;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: var(--background);
+}
+
+.advertising{
+    max-height: var(--advHeigth);
+    max-width: var(--advWidth);
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    background-color: #202020;
+    color: white;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    min-height: 100px;
+}
+
+#profilePic {
+    max-width: 50px;
+    border-radius: 100%;
+    /* border: solid 1px var(--light-orange); */
+}
+
+.nav-item {
+    padding: 5px;
+    height: fit-content;
+}
+
+#mainIframe {
+    width: 100%;
+    height: calc(100% - 2*var(--advHeigth));
+    overflow-x: hidden;
+}
+
+.nav-link {
+    color: white;
+}
+
+.nav-link:hover {
+    color: var(--pink);
+}
+
+.nav {
+    --bs-nav-link-color: var(--pink);
+    --bs-nav-link-hover-color: var(--pink);
+}
+
+a.nav-link.active {
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to left, var(--violet), var(--pink));
+    color: var(--pink);
+}
+
+.btn-primary{
+    background-color: var(--violet);
+    color: white;
+    border-color: var(--violet);
+}
+
+.btn-primary:hover{
+    background-color: var(--pink);
+    border-color: var(--pink);
+}
+
+#headerUserInfo{
+    margin-right: 10px;
+}
+
+.navDesktop {
+    display: flex;
+    margin: 0 !important;
+}
+
+.navbar-brand{
+    height: fit-content;
+}
+
+#sideMenu {
+    background-color: rgb(40, 40, 40);
+    position: absolute;
+    height: calc(100% - 2*var(--advHeigth));
+    z-index: 100;
+    display: none;
+    transition-property: opacity;
+    transition-duration: 2s;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.navMobile{
+    padding-left: 8px;
+}
+
+#sideMenu.active {
+    display: flex;
+    transition-property: opacity;
+    transition-duration: 2s;
+}
+
+.swal2-popup{
+    background-color: rgba(var(--bs-dark-rgb)) !important;;
+    color: white;
+}
+
+#elencoRichieste{
+    max-width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gameCard{
+    margin: 5px;
+    width: 30vw;
+}
+
+.whatsapp {
+    color: rgb(0, 177, 0);
+}
+
+.whatsapp:hover{
+    color: greenyellow;
+}
+
+.facebook {
+    color: #2d99ff;
+}
+
+.facebook:hover{
+    color: #234da8;
+}
+
+.instagram {
+    color: #cc2366;
+}
+
+#bckButton{
+    z-index: 10;
+    position: fixed;
+}
+
+#logout{
+    margin-right: 10px;
+}
+
+/* Visualizzazione Mobile */
+@media screen and (max-width: 480px) {
+    #desktopIcon {
+        display: none;
+    }
+
+    #mobileIcon{
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .iconButton{
+        background-color: rgba(255, 255, 255, 0);
+        border: 1px solid;
+        border-image-slice: 1;
+        border-image-source: linear-gradient(to left, var(--violet), var(--pink));
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navDesktop {
+        display: none;
+    }
+
+    .gameCard{
+        margin: 5px;
+        width: 100vw;
+    }
+
+    #nuovaRichiesta{
+        width: 80vw;
+        margin-bottom: 60px;
+    }
+
+    #mainIframe {
+        width: 100%;
+        height: calc(100% - 160px);
+        overflow-x: hidden;
+    }
+
+    #appName {
+        font-size: medium;
+    }
+
+    .userContacts{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* Visualizzazione Desktop */
+@media screen and (min-width: 480px) {
+    #mobileIcon {
+        display: none;
+    }
+
+    .iconButton{
+        display: none;
+    }
+
+    #navDesktop {
+        display: flex;
+        justify-content: space-between;
+    }
+}
