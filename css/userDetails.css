@@ -52,7 +52,7 @@
 /* Visualizzazione Mobile */
 @media screen and (max-width: 480px) {
     #map {
-        width: 460px;
+        width: 360px;
     }
 }
 
