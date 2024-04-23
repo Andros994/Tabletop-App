@@ -67,19 +67,19 @@ $(document).ready(function(){
     }
 
     $(document).on("click", '#profilePic', function(){      // vado ai dettagli dell'utente
-        window.location.href = "/pages/userDetails.html";
+        window.location.href = "../pages/userDetails.html";
     })
 
     $(document).on("click", "#logout", function(){
         //todo fare loggout
-        window.location.href = "/index.html"
+        window.location.href = "../index.html"
     })
 
     $(document).on("click", ".nav-link", function(){
         $('.nav-link').removeClass("active");
         $(this).addClass("active");
         var pageName = $(this).attr('pageName');
-        $('#mainIframe').attr('src', `/pages/homePages/${pageName}.html`)
+        $('#mainIframe').attr('src', `../pages/homePages/${pageName}.html`)
     })
 
     $(document).on("click", "#mobileIcon", function(){
