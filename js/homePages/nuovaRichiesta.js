@@ -113,7 +113,7 @@ $(document).ready(function(){
             .then(() => {
                 Swal.fire("Salvataggio completato", "La tua richiesta è stata inserita correttamente", "success")
                     .then(() => {
-                        window.location.href = "/pages/homePages/elencoRichieste.html";
+                        window.location.href = "../pages/homePages/elencoRichieste.html";
                     });
             });
     })
