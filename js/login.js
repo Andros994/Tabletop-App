@@ -53,7 +53,7 @@ $(document).ready(function(){
                     // Setto l'authentication nella sessione
                     sessionStorage.setItem('auth', JSON.stringify(user));
                     //todo reindirizzare alla homePage
-                    window.location.href = "../pages/home.html";
+                    window.location.href = "pages/home.html";
                 } else {
                     Swal.fire("Email non verificata", "Controlla tra le mail indesiderate se hai ricevuto una mail di verifica", "warning");
                 }
