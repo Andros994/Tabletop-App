@@ -1,4 +1,4 @@
-#Tabletop-App
+# Tabletop-App
 
 Questa web-app è stata pensata per aiutare gli amanti dei giocatori da tavolo a trovarsi ed accordarsi su cosa giocare.
 
