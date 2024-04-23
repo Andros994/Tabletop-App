@@ -45,7 +45,7 @@ $(document).ready(function(){
     getLocation();
     
     $(document).on("click", '#home', function(){        // torno alla home
-        window.location.href = "/pages/home.html";
+        window.location.href = "../pages/home.html";
     })
 
     $(document).on("change", "#file", readFile);        // cambio immagine profilo
