@@ -64,6 +64,8 @@ $(document).ready(function(){
                 console.log(errorCode, errorMessage);
                 if (errorCode == "auth/invalid-email"){
                     Swal.fire("Errore!", "Email non trovata", "warning")
+                } else if (errorCode == 'auth/invalid-credential'){
+                    Swal.fire("Errore!", "Credenziali errate", "warning");
                 }
             });
 
