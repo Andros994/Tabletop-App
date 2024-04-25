@@ -78,7 +78,7 @@ $(document).ready(function(){
                             icon: "success",
                             showCancelButton: false,
                         }).then(() => {
-                            window.location.href = "/index.html";
+                            window.location.href = "../index.html";
                             });
                         })
             })
