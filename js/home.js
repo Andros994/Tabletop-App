@@ -1,4 +1,4 @@
-var userLogged;
+var userLogged, advs = [];
 
 window.onload = () => {
     const transitionElement = document.querySelector('.transition')
@@ -9,12 +9,20 @@ window.onload = () => {
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+
 import { getDatabase, 
         ref, 
         get, 
         child
     } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-database.js";
-import { getAuth } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
+
+    import { 
+        getFirestore, 
+        getDocs, 
+        collection 
+    } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js";
+
+    import { getAuth } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -37,7 +45,13 @@ const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 const auth = getAuth();
 
+// Firestore DB
+const db = getFirestore();
+const advRef = collection(db, 'advertising');
+
 $(document).ready(function(){
+
+    getAdv();
 
     // dall'username dell'utente loggato cerco quello sulla collection /users
     const authLogged = JSON.parse(sessionStorage.getItem('auth'));
@@ -87,3 +101,22 @@ $(document).ready(function(){
     })
 
 })
+
+function getAdv(){
+    getDocs(advRef).then((snapShot) => {
+        snapShot.docs.forEach((doc) => {
+            advs.push({  id: doc.id, ...doc.data()});
+        });
+        fillAdv(advs);
+    })
+    .catch(err => {
+        console.log(err);
+    });
+}
+
+function fillAdv(array){
+    array.forEach(element => {
+        var adv = `<a href="${element.link}" target="_blank" title="${element.title}"><img src="${element.imgB64}" class="advertising"></a>`
+        $('#adv').append(adv);
+    });
+}
