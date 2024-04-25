@@ -66,7 +66,7 @@ function populateMap(arrayUtenti) {
             if (element.latitude != "" && element.longitude != "" && element.latitude != undefined && element.longitude != undefined){
                 var marker = L.marker([element.latitude, element.longitude]).addTo(map);
                 var whAppBtn = "", fbBtn = "", igBtn = "", telegramBtn = "";
-                element.telefono != "" = telegramBtn = `<a href="https://t.me/${element.telefono}" target="_blank"><i class="fa-brands fa-telegram telegram fa-xl" style="margin-right: 5px;"></i></a>` : "";
+                element.telefono != "" ? telegramBtn = `<a href="https://t.me/${element.telefono}" target="_blank"><i class="fa-brands fa-telegram telegram fa-xl" style="margin-right: 5px;"></i></a>` : "";
                 element.telefono != "" ? whAppBtn = `<a href="https://wa.me/${element.telefono}" target="_blank"><i class="fa-brands fa-whatsapp whatsapp fa-xl" style="margin-right: 5px;"></i></a>` : "" 
                 element.fbLink != "" ? fbBtn = `<a href="${element.fbLink}" target="_blank"><i class="fa-brands fa-facebook facebook fa-xl" style="margin-right: 5px;"></i></a>` : "" 
                 element.igLink != "" ? igBtn = `<a href="${element.igLink}" target="_blank"><i class="fa-brands fa-instagram instagram fa-xl" style="margin-right: 5px;"></i></a>` : "" 
