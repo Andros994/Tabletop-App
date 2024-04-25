@@ -154,7 +154,9 @@ function modalRichiesta(creator, richiesta){
     var whAppBtn = "";
     var fbBtn = "";
     var igBtn = "";
+    var telegramBtn = "";
     creator.telefono != "" ? phoneBtn = `<a href="tel: ${creator.telefono}" style="margin: 5px;"><i class="fa-solid fa-phone" style="margin-right: 5px;"></i>${creator.telefono}</a>` : "" 
+    creator.telefono != "" ? telegramBtn = `<a href="https://t.me/${creator.telefono}" target="_blank" style="margin: 5px;"><i class="fa-brands fa-telegram telegram fa-xl" style="margin-right: 5px;"></i></a>` : "" 
     creator.telefono != "" ? whAppBtn = `<a href="https://wa.me/${creator.telefono}" target="_blank" style="margin: 5px;"><i class="fa-brands fa-whatsapp whatsapp fa-xl" style="margin-right: 5px;"></i></a>` : "" 
     creator.fbLink != "" ? fbBtn = `<a href="${creator.fbLink}" target="_blank" style="margin: 5px;"><i class="fa-brands fa-facebook facebook fa-xl" style="margin-right: 5px;"></i></a>` : "" 
     creator.igLink != "" ? igBtn = `<a href="${creator.igLink}" target="_blank" style="margin: 5px;"><i class="fa-brands fa-instagram instagram fa-xl" style="margin-right: 5px;"></i></a>` : "" 
@@ -171,6 +173,7 @@ function modalRichiesta(creator, richiesta){
                 <a style="color: white;" href="mailto:${creator.email}" style="margin: 5px;"><i class="fa-solid fa-envelope" style="margin-right: 5px;"></i>Invia mail</a>
                 ${phoneBtn}
                 <div class="p-2">
+                    ${telegramBtn}
                     ${whAppBtn}
                     ${fbBtn}
                     ${igBtn}
