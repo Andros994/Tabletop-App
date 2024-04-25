@@ -172,6 +172,14 @@ a.nav-link.active {
     width: 30vw;
 }
 
+.telegram {
+    color: rgb(0, 161, 255)
+}
+
+.telegram:hover {
+    color: rgb(0, 196, 255)
+}
+
 .whatsapp {
     color: rgb(0, 177, 0);
 }
