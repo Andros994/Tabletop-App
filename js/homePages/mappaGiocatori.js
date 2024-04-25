@@ -63,7 +63,7 @@ function populateMap(arrayUtenti) {
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }).addTo(map);
         arrayUtenti.forEach(element => {
-            if (element.latitude != "" && element.longitude != ""){
+            if (element.latitude != "" && element.longitude != "" && element.latitude != undefined && element.longitude != undefined){
                 var marker = L.marker([element.latitude, element.longitude]).addTo(map);
                 var whAppBtn = "", fbBtn = "", igBtn = "";
                 element.telefono != "" ? whAppBtn = `<a href="https://wa.me/${element.telefono}" target="_blank"><i class="fa-brands fa-whatsapp whatsapp fa-xl" style="margin-right: 5px;"></i></a>` : "" 
