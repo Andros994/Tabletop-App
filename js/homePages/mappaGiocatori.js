@@ -62,11 +62,10 @@ function populateMap(arrayUtenti) {
             maxZoom: 19,
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }).addTo(map);
-        var marker = L.marker([location.coords.latitude, location.coords.longitude]).addTo(map);
         arrayUtenti.forEach(element => {
             if (element.latitude != "" && element.longitude != ""){
-                var marker = L.marker([location.coords.latitude, location.coords.longitude]).addTo(map);
-                var whAppBtn, fbBtn, igBtn;
+                var marker = L.marker([element.latitude, element.longitude]).addTo(map);
+                var whAppBtn = "", fbBtn = "", igBtn = "";
                 element.telefono != "" ? whAppBtn = `<a href="https://wa.me/${element.telefono}" target="_blank"><i class="fa-brands fa-whatsapp whatsapp fa-xl" style="margin-right: 5px;"></i></a>` : "" 
                 element.fbLink != "" ? fbBtn = `<a href="${element.fbLink}" target="_blank"><i class="fa-brands fa-facebook facebook fa-xl" style="margin-right: 5px;"></i></a>` : "" 
                 element.igLink != "" ? igBtn = `<a href="${element.igLink}" target="_blank"><i class="fa-brands fa-instagram instagram fa-xl" style="margin-right: 5px;"></i></a>` : "" 
