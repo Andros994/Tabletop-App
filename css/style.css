@@ -160,7 +160,7 @@ a.nav-link.active {
     color: white;
 }
 
-#elencoRichieste{
+#elencoRichieste, #listaEventi{
     max-width: 100vw;
     display: flex;
     flex-wrap: wrap;
